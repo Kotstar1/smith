@@ -93,7 +93,7 @@ class FieldController extends Controller
                 $block->setFieldValues($blockData['fields']);
             }
 
-            $blockInfo = Smith::$plugin->field->renderMatrixBlock($namespace, $field, $block, $placeholderKey);
+            $blockInfo = Smith::$plugin->field->renderMatrixBlock($namespace, $fieldHandle, $block, $placeholderKey);
 
             $renderedBlocks[] = [
                 'typeId' => $blockType->id,

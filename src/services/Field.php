@@ -26,7 +26,7 @@ class Field extends Component
         // Set a temporary namespace for these
         $view = Craft::$app->getView();
         $originalNamespace = $view->getNamespace();
-        $namespace = $view->namespaceInputName("{$fieldNamespace}[{$field->handle}][blocks][__BLOCK_{$placeholderKey}__]", $originalNamespace);
+        $namespace = $view->namespaceInputName("{$fieldNamespace}[{$field}][blocks][__BLOCK_{$placeholderKey}__]", $originalNamespace);
         $view->setNamespace($namespace);
 
         $blockType = $block->getType();
